@@ -1,0 +1,13 @@
+---
+Name: cookie-policy-notification
+After:
+  - "framework/*"
+---
+
+SilverStripe\CMS\Controllers\ContentController:
+  extensions:
+    - CookiePolicy\Objects\CookiePolicy
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - CookiePolicy\Objects\SiteConfigCookiePolicy

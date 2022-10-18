@@ -17,8 +17,8 @@
     },
     "autoload": {
         "psr-4": {
-            "SilverStripeModule\\Skeleton\\": "src/",
-            "SilverStripeModule\\Skeleton\\Tests\\": "tests/"
+            "CookiePolicy\\Objects": "src/Objects",
+            "CookiePolicy\\Tests\\": "tests/"
         }
     },
     "extra": {

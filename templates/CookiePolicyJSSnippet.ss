@@ -24,17 +24,17 @@ function initCookiePolicy() {
 if (typeof define === 'function' && typeof require === 'function' && typeof window.jQuery === 'undefined') {
 deferJQ(function () {
 require([
-'_resources/vendor/violet88/client/dist/js/jquery.cookie.min.js'
+'_resources/vendor/violet88/silverstripe-cookiepolicy/client/dist/js/jquery.cookie.min.js'
 ], function(cookie) {
 require([
-'_resources/vendor/violet88/client/dist/js/jquery.policy.min.js'
+'_resources/vendor/violet88/silverstripe-cookiepolicy/client/dist/js/jquery.policy.min.js'
 ], function (policy) {
 jQuery('body').cookieNotify($config.RAW);
 });
 });
 });
 } else {
-injectPolicyScript('_resources/vendor/violet88/client/dist/js/jquery.cookie.policy.min.js');
+injectPolicyScript('_resources/vendor/violet88/silverstripe-cookiepolicy/client/dist/js/jquery.cookie.policy.min.js');
 }
 }
 

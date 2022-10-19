@@ -1,5 +1,5 @@
 {
-    "name": "violet88/silverstripe-cookiepolikcy",
+    "name": "violet88/silverstripe-cookiepolicy",
     "description": "A module to add a cookie policy to your SilverStripe website",
     "type": "silverstripe-vendormodule",
     "keywords": [

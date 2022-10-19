@@ -1,6 +1,6 @@
 {
-    "name": "silverstripe-module/skeleton",
-    "description": "A skeleton for SilverStripe modules.",
+    "name": "violet88/silverstripe-cookiepolikcy",
+    "description": "A module to add a cookie policy to your SilverStripe website",
     "type": "silverstripe-vendormodule",
     "keywords": [
         "silverstripe",

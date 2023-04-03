@@ -30,16 +30,16 @@ class SiteConfigCookiePolicy extends DataExtension
         // Styling options
         'CookiePolicyIncludeJquery'            => 'Boolean',
         'CookiePolicyPosition'                 => "Enum('top, bottom', 'bottom')",
-        'CookiePolicyBgColor'                  => 'Color',
-        'CookiePolicyTextColor'                => 'Color',
-        'CookiePolicyBtnColor'                 => 'Color',
-        'CookiePolicyBtnTextColor'             => 'Color',
-        'CookiePolicyBtnHoverColor'            => 'Color',
-        'CookiePolicyBtnHoverTextColor'        => 'Color',
-        'CookiePolicyDeclineBtnColor'          => 'Color',
-        'CookiePolicyDeclineBtnTextColor'      => 'Color',
-        'CookiePolicyDeclineBtnHoverColor'     => 'Color',
-        'CookiePolicyDeclineBtnHoverTextColor' => 'Color',
+        'CookiePolicyBgColor'                  => 'Varchar(10)',
+        'CookiePolicyTextColor'                => 'Varchar(10)',
+        'CookiePolicyBtnColor'                 => 'Varchar(10)',
+        'CookiePolicyBtnTextColor'             => 'Varchar(10)',
+        'CookiePolicyBtnHoverColor'            => 'Varchar(10)',
+        'CookiePolicyBtnHoverTextColor'        => 'Varchar(10)',
+        'CookiePolicyDeclineBtnColor'          => 'Varchar(10)',
+        'CookiePolicyDeclineBtnTextColor'      => 'Varchar(10)',
+        'CookiePolicyDeclineBtnHoverColor'     => 'Varchar(10)',
+        'CookiePolicyDeclineBtnHoverTextColor' => 'Varchar(10)',
         'CookiePolicyLeftPadding'              => 'Varchar(10)',
         'CookiePolicyRightPadding'             => 'Varchar(10)',
         'CookiePolicyHideAnimation'            => 'Varchar(20)',
@@ -81,10 +81,10 @@ class SiteConfigCookiePolicy extends DataExtension
                 ->setTitle(_t('CookiePolicy.DESCRIPTION', "Description"))
                 ->setDescription('Default: We use cookies on this website.')
                 ->setRows(10),
-            ColorField::create("CookiePolicyBgColor")
+            TextField::create("CookiePolicyBgColor")
                 ->setTitle(_t('CookiePolicy.BGCOLOR', "Background Color"))
                 ->setDescription('Default: #CCC'),
-            ColorField::create("CookiePolicyTextColor")
+            TextField::create("CookiePolicyTextColor")
                 ->setTitle(_t('CookiePolicy.TEXTCOLOR', "Text Color"))
                 ->setDescription('Default: #000'),
             TextField::create("CookiePolicyLeftPadding")
@@ -104,16 +104,16 @@ class SiteConfigCookiePolicy extends DataExtension
                     ->setAttribute('placeholder', 'Default: I Agree')
                     ->setAttribute('style', 'width: 512px;'),
                 LiteralField::create('decline-separator', '<hr style="width: calc(100vw - 512px);border: none;margin: 0;">'),
-                ColorField::create("CookiePolicyBtnColor")
+                TextField::create("CookiePolicyBtnColor")
                     ->setTitle(_t('CookiePolicy.BUTTONCOLOR', "Accept Button Color"))
                     ->setAttribute('placeholder', 'Default: #000'),
-                ColorField::create("CookiePolicyBtnTextColor")
+                TextField::create("CookiePolicyBtnTextColor")
                     ->setTitle(_t('CookiePolicy.BUTTONTEXTCOLOR', "Accept Button Text Color"))
                     ->setAttribute('placeholder', 'Default: #FFF'),
-                ColorField::create("CookiePolicyBtnHoverColor")
+                TextField::create("CookiePolicyBtnHoverColor")
                     ->setTitle(_t('CookiePolicy.BUTTONHOVERCOLOR', "Accept Button Hover Color"))
                     ->setAttribute('placeholder', 'Default: #AAA'),
-                ColorField::create("CookiePolicyBtnHoverTextColor")
+                TextField::create("CookiePolicyBtnHoverTextColor")
                     ->setTitle(_t('CookiePolicy.BUTTONHOVERTEXTCOLOR', "Accept Button Hover Text Color"))
                     ->setAttribute('placeholder', 'Default: #000')
             )->setTitle(_t('CookiePolicy.BUTTON', "Accept Button")),
@@ -125,16 +125,16 @@ class SiteConfigCookiePolicy extends DataExtension
                     ->setAttribute('placeholder', 'Default: I Disagree')
                     ->setAttribute('style', 'width: 512px;'),
                 LiteralField::create('decline-separator', '<hr style="width: calc(100vw - 512px);border: none;margin: 0;">'),
-                ColorField::create("CookiePolicyDeclineBtnColor")
+                TextField::create("CookiePolicyDeclineBtnColor")
                     ->setTitle(_t('CookiePolicy.DECLINEBUTTONCOLOR', "Decline Button Color"))
                     ->setAttribute('placeholder', 'Default: #000'),
-                ColorField::create("CookiePolicyDeclineBtnTextColor")
+                TextField::create("CookiePolicyDeclineBtnTextColor")
                     ->setTitle(_t('CookiePolicy.DECLINEBUTTONTEXTCOLOR', "Decline Button Text Color"))
                     ->setAttribute('placeholder', 'Default: #FFF'),
-                ColorField::create("CookiePolicyDeclineBtnHoverColor")
+                TextField::create("CookiePolicyDeclineBtnHoverColor")
                     ->setTitle(_t('CookiePolicy.DECLINEBUTTONHOVERCOLOR', "Decline Button Hover Color"))
                     ->setAttribute('placeholder', 'Default: -'),
-                ColorField::create("CookiePolicyDeclineBtnHoverTextColor")
+                TextField::create("CookiePolicyDeclineBtnHoverTextColor")
                     ->setTitle(_t('CookiePolicy.DECLINEBUTTONHOVERTEXTCOLOR', "Decline Button Hover Text Color"))
                     ->setAttribute('placeholder', 'Default: -')
             )->setTitle(_t('CookiePolicy.DECLINEBUTTON', "Decline Button")),
